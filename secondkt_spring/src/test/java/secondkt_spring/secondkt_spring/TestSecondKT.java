@@ -12,7 +12,7 @@ public class TestSecondKT {
    //readFile
     @Test
     public void testIfReadFileExcisting(){
-        String testFileName = "/Users/gertinpakkonen/Desktop/KooliAsjad/pohikursus_2k/secondkt/testFile.txt";
+        String testFileName = "/Users/gertinpakkonen/Desktop/KooliAsjad/2019kevad/programeerimise põhikursus/10tund/pohikursus_2k/secondkt_spring/testFile.txt";
         SecondKT KTfile = new SecondKT();
         String result = KTfile.readFile(testFileName);
         assertTrue(result != null);
@@ -20,7 +20,7 @@ public class TestSecondKT {
 
     @Test
     public void testIfReadFileIsWorking(){
-        String testFileName = "/Users/gertinpakkonen/Desktop/KooliAsjad/pohikursus_2k/secondkt/testFile.txt";
+        String testFileName = "/Users/gertinpakkonen/Desktop/KooliAsjad/2019kevad/programeerimise põhikursus/10tund/pohikursus_2k/secondkt_spring/testFile.txt";
         String expected = "my test";
         SecondKT KTfile = new SecondKT();
         String result = KTfile.readFile(testFileName);
@@ -39,7 +39,7 @@ public class TestSecondKT {
     @Test
     public void testIfSplitWordsCountsRight(){
         String text = "test on see";
-        String[] textArray = text.split("\\s");
+        String[] textArray = {"test", "on", "see"};
         SecondKT KTfile = new SecondKT();
         String[] result = KTfile.splitWords(text);
         assertArrayEquals(textArray, result);
